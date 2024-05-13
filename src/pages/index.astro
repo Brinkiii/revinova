@@ -2,12 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Navbar from '../components/Navbar.astro';
+import Header from '../components/Header.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-	
+	<Header/>
+	<Navbar/>
 	<main>
-		<Navbar />
+
 		<!-- <ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"

@@ -2,20 +2,28 @@
 import headerBild from "../images/header.jpg";
 ---
 
-<header>
-    <h1>Revinova GmbH</h1>
+<header class="min-h-96 lg:min-h-svh">
+    <div class="z-20 px-4">
+        <h1 class="text-5xl font-bold">Revinova GmbH</h1>
+    </div>
 </header>
 <style>
     header {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        background-image: url(/src/images/header.jpg);
+        background-size: cover;
+    }
+    header::before {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        background-image: url(/src/images/header.jpg);
-        background-size: cover;
-        min-height: 100svh;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .5);
+        z-index: 10;
     }
 </style>

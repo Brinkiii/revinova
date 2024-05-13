@@ -6,10 +6,10 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 
-<nav id="navbar" class="bg-white border-gray-200 dark:bg-gray-900 rounded-full drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] max-h-[96px]">
-  <div class="flex flex-wrap items-center justify-between py-2 px-12">
+<nav id="navbar" class="absolute top-5 w-full px-4 drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] max-h-[56px] lg:max-h-[96px] z-30">
+  <div class="flex flex-wrap items-center justify-between py-2 px-4 lg:px-12 bg-white border-gray-200 dark:bg-gray-900 rounded-full max-h-[56px] lg:max-h-[96px]">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <Image src={revinovaLogo} class="w-24 h-auto" alt="Flowbite Logo" />
+        <Image src={revinovaLogo} class="w-12 lg:w-24 h-auto" alt="Flowbite Logo" />
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -42,9 +42,5 @@ const currentPath = pathname.slice(1); // remove the first "/"
   }
   .active a{
     color: black;
-  }
-  nav {
-    position: sticky;
-    top: 20px;
   }
 </style>
