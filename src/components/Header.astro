@@ -1,10 +1,18 @@
 ---
 import headerBild from "../images/header.jpg";
+import { Image } from 'astro:assets';
+import Navbar from "./Navbar.astro";
 ---
 
-<header class="min-h-96 lg:min-h-svh">
-    <div class="z-20 px-4">
-        <h1 class="text-5xl font-bold">Revinova GmbH</h1>
+<header class="min-h-96 lg:h-full">
+	<Navbar/>
+    <div class="grid grid-cols-1 lg:grid-cols-12 px-4 lg:px-8 gap-4 mt-[136px]">
+        <div class="lg:col-span-6">
+            <Image src={headerBild} alt="Header" class="object-cover"/>
+        </div>
+        <div class="lg:col-span-6">
+            <Image src={headerBild} alt="Header" class="object-cover"/>
+        </div>
     </div>
 </header>
 <style>
@@ -13,10 +21,10 @@ import headerBild from "../images/header.jpg";
         justify-content: center;
         align-items: center;
         width: 100%;
-        background-image: url(/src/images/header.jpg);
-        background-size: cover;
+        /* background-image: url(/src/images/header.jpg);
+        background-size: cover; */
     }
-    header::before {
+    /* header::before {
         content: '';
         position: absolute;
         top: 0;
@@ -25,5 +33,5 @@ import headerBild from "../images/header.jpg";
         height: 100%;
         background-color: rgba(255, 255, 255, .5);
         z-index: 10;
-    }
+    } */
 </style>
