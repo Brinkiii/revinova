@@ -1,13 +1,13 @@
 ---
 import {Image} from "astro:assets";
-import revinovaLogo from "../images/revinova_screenshot.png";
+import revinovaLogo from "../images/Logo_Revinova.svg";
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 
-<nav id="navbar" class="absolute top-5 w-full px-4 drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] max-h-[56px] lg:max-h-[96px] z-30">
-  <div class="flex flex-wrap items-center justify-between py-2 px-4 lg:px-12 bg-white border-gray-200 dark:bg-gray-900 rounded-full max-h-[56px] lg:max-h-[96px]">
+<nav id="navbar" class="fixed top-5 w-full px-4 drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] max-h-[56px] lg:max-h-[96px] z-30">
+  <div class="flex flex-wrap items-center justify-between pb-4 pt-1 px-8 lg:px-16 bg-white border-gray-200 dark:bg-gray-900 rounded-full max-h-[56px] lg:max-h-[96px]">
     <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
         <Image src={revinovaLogo} class="w-12 lg:w-24 h-auto" alt="Flowbite Logo" />
     </a>
