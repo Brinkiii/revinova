@@ -5,7 +5,7 @@ import card2 from "../images/card2.webp";
 import card3 from "../images/card3.webp";
 import card4 from "../images/card4.webp";
 ---
-<div class="flex flex-col justify-center items-center text-center py-32">
+<div class="flex flex-col justify-center items-center text-center py-24 lg:py-32 ct-1 relative">
     <h1 class="text-3xl lg:text-4xl lg:mb-4 xl:text-6xl xl:w-[75%] font-bold mb-2 !leading-[1.1em]">Machen Sie Ihr Zuhause perfekt mit Revinova GmbH!</h1>
     <div class="xl:w-[75%] flex flex-col mb-16">
         <p class="lg:text-xl">Bauen. Wohnen. Renovieren.</p>
@@ -18,3 +18,26 @@ import card4 from "../images/card4.webp";
         <Card src={card4} title={"Lorem Ipsum"} description={"Lorem Ipsum dolor sit amet lorem dolor aret itum salet itin odunis rashupti."} link={"/leistungen"}/>
     </div>
 </div>
+<style>
+    @media (max-width: 768px) {
+        .ct-1::before {
+            display: none;
+        }
+    }
+    .ct-1::before {
+        content: '';
+        position: absolute;
+        top: 50px;
+        z-index: -1;
+        rotate: 5deg;
+        width: 313px;
+        height: 100%;
+        background-size: cover;
+        background-image: url("/src/images/holz.png");
+    }
+    @media (min-width: 1280px) {
+        .ct-1::before {
+            right: -7vw;
+        }
+    }
+</style>
