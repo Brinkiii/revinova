@@ -53,10 +53,9 @@ import Header from '../components/Header.astro';
 	}
 	main {
 		margin: auto;
-		padding: 1rem;
 		width: 1536px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: rgb(17 24 39);
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -92,4 +91,25 @@ import Header from '../components/Header.astro';
 		font-style: italic;
 		font-display: swap;
 	}
+	/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #0c0a09 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0c0a09;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
 </style>

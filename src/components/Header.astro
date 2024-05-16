@@ -1,10 +1,23 @@
 ---
 import headerBild from "../images/header.jpg";
+import logo from "../images/Logo_Revinova.svg";
+import { Image } from 'astro:assets';
+import Navbar from "./Navbar.astro";
 ---
 
-<header class="min-h-96 lg:min-h-svh">
-    <div class="z-20 px-4">
-        <h1 class="text-5xl font-bold">Revinova GmbH</h1>
+<header class="min-h-96 lg:h-full">
+	<Navbar/>
+    <div class="grid grid-cols-1 md:grid-cols-12 px-4 lg:px-8 gap-4 mt-[100px] md:mt-[136px] justify-center relative">
+        <div class="md:col-span-5 items-center flex flex-col justify-center md:bg-[#ededed] gap-4 shadow-lg">
+            <Image src={logo} alt="Revinova Logo" class="object-cover size-64 sm:size-[320px] md:w-full md:h-auto md:p-8"/>
+            <div class="flex flex-row gap-2 justify-between flex-wrap px-4">
+                <a href="/" class="bg-stone-950 transition-all hover:bg-stone-700 text-white font-normal py-4 text- px-6 rounded text-xl mb-5">Unsere Services</a>
+                <a href="/" class="bg-stone-950 transition-all hover:bg-stone-700 text-white font-normal py-4 text- px-6 rounded text-xl mb-5">Über uns</a>
+            </div>
+        </div>
+        <div class="md:col-span-8 md:col-start-6 header-bild relative shadow-lg">
+            <Image src={headerBild} alt="Header" class="object-cover w-full h-full"/>
+        </div>
     </div>
 </header>
 <style>
@@ -13,10 +26,24 @@ import headerBild from "../images/header.jpg";
         justify-content: center;
         align-items: center;
         width: 100%;
-        background-image: url(/src/images/header.jpg);
-        background-size: cover;
+        /* background-image: url(/src/images/header.jpg);
+        background-size: cover; */
     }
-    header::before {
+    /* .header-bild::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -50%;
+        transform: translateY(-50%) translateX(25%);
+        background-color: #ededed;
+        padding: 20rem;
+        width: 250px;
+        height: 220px;
+        background-size: cover;
+        z-index: 2;
+        background-image: url("../images/Logo_Revinova.svg");
+    } */
+    /* header::before {
         content: '';
         position: absolute;
         top: 0;
@@ -25,5 +52,5 @@ import headerBild from "../images/header.jpg";
         height: 100%;
         background-color: rgba(255, 255, 255, .5);
         z-index: 10;
-    }
+    } */
 </style>
