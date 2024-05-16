@@ -20,7 +20,6 @@ import Header from '../components/Header.astro';
 	</head>
 	<body>
 		<slot />
-	<script is:inline src="/public/flowbite.js"></script>
 	<script is:inline src="/public/app.js"></script>
 	</body>
 </html>
@@ -39,6 +38,10 @@ import Header from '../components/Header.astro';
 	html {
 		font-family: 'Poppins', system-ui, sans-serif;
 		background: white;
+	}
+	body {
+		max-width: 1920px;
+		margin-inline: auto;
 	}
 	code {
 		font-family:
