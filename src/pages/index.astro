@@ -26,7 +26,10 @@ import benni from "../images/benni.webp";
 			<TeamCard src={benni} name={"Benjamin Rechenbach"} position={"Geschäftsführer / Handwerker"}/>
 			<TeamCard src={benni} name={"Frank Rostin"} position={"Handwerker"}/>
 		</div>
-		<Contact client:load/>
+		<div class="form-container relative">
+			<Contact client:load/>
+
+		</div>
 	</main>
 </Layout>
 
@@ -78,5 +81,27 @@ import benni from "../images/benni.webp";
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	@media (max-width: 768px) {
+		.form-container::before {
+			display: none;
+		}
+	}
+	.form-container::before {
+		content: '';
+		position: absolute;
+		top: 50px;
+		z-index: -1;
+		rotate: -15deg;
+		width: 313px;
+		height: 100%;
+		background-size: cover;
+		background-image: url("/src/images/holz.png");
+		mix-blend-mode: multiply;
+	}
+	@media (min-width: 1280px) {
+		.form-container::before {
+			left: -2vw;
+		}
 	}
 </style>

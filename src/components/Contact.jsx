@@ -6,38 +6,11 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-
-const css = `
-@media (max-width: 768px) {
-    .main-form::before {
-        display: none;
-    }
-}
-.main-form::before {
-    content: '';
-    position: absolute;
-    top: 50px;
-    z-index: -1;
-    rotate: -15deg;
-    width: 313px;
-    height: 100%;
-    background-size: cover;
-    background-image: url("/src/images/holz.png");
-    mix-blend-mode: multiply;
-}
-@media (min-width: 1280px) {
-    .main-form::before {
-        left: -2vw;
-    }
-}
-`
-
 export default function Example() {
   const [agreed, setAgreed] = useState(false)
 
   return (
     <div className="main-form relative isolate px-6 py-24 sm:py-32 lg:px-8">
-    <style>{css}</style>
       <div className="mx-auto max-w-2xl text-center">
         <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontaktieren Sie uns</h3>
         <p className="mt-2 text-lg leading-8 text-gray-600">
