@@ -5,6 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -19,7 +20,9 @@ import Header from '../components/Header.astro';
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 	</head>
 	<body>
+		<Header/>
 		<slot />
+		<Footer/>
 	<script is:inline src="/public/app.js"></script>
 	</body>
 </html>
