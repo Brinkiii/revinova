@@ -6,11 +6,38 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+const css = `
+@media (max-width: 768px) {
+    .main-form::before {
+        display: none;
+    }
+}
+.main-form::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    rotate: -15deg;
+    width: 313px;
+    height: 100%;
+    background-size: cover;
+    background-image: url("/src/images/holz.png");
+    mix-blend-mode: multiply;
+}
+@media (min-width: 1280px) {
+    .main-form::before {
+        left: -2vw;
+    }
+}
+`
+
 export default function Example() {
   const [agreed, setAgreed] = useState(false)
 
   return (
-    <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+    <div className="main-form relative isolate px-6 py-24 sm:py-32 lg:px-8">
+    <style>{css}</style>
       <div className="mx-auto max-w-2xl text-center">
         <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontaktieren Sie uns</h3>
         <p className="mt-2 text-lg leading-8 text-gray-600">
@@ -110,8 +137,8 @@ export default function Example() {
           </div>
           
             <div class="flex items-center">
-                <input id="link-checkbox" type="checkbox" value="" class="w-4 h-4 text-gray-900 bg-gray-100 border-gray-300 rounded focus:ring-stone-400 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                <label for="link-checkbox" class="whitespace-nowrap ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a href="#" class="text-blue-600 dark:text-stone-400 hover:underline">terms and conditions</a>.</label>
+                <input id="link-checkbox" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-stone-400 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600" />
+                <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 sm:whitespace-nowrap">Ich habe die <a href="/datenschutz" class="text-blue-600 hover:underline dark:text-stone-400">Datenschutzerklärung</a> gelesen und akzeptiert.</label>
             </div>
 
         </div>
@@ -119,12 +146,13 @@ export default function Example() {
           <button
             type="submit"
             value="submit"
-            className="block w-full rounded-md bg-stone-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white transition-all shadow-sm hover:bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full rounded-md bg-stone-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
             Nachricht abschicken
           </button>
         </div>
       </form>
+      
     </div>
   )
 }

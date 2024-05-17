@@ -2,9 +2,10 @@
 interface Props {
 	title: string;
 }
-
+import '../styles.css';
 const { title } = Astro.props;
 import Header from '../components/Header.astro';
+import Header2 from '../components/Header2.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -20,7 +21,7 @@ import Footer from '../components/Footer.astro';
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 	</head>
 	<body>
-		<Header/>
+		<Header2/>
 		<slot />
 		<Footer/>
 	<script is:inline src="/public/app.js"></script>
@@ -42,6 +43,7 @@ import Footer from '../components/Footer.astro';
 		font-family: 'Poppins', system-ui, sans-serif;
 		background: white;
 		overflow-x: clip;
+		background-color: #ffffff;
 	}
 	body {
 		max-width: 1536px;

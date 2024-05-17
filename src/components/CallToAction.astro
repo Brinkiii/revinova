@@ -6,7 +6,7 @@ import card3 from "../images/card3.webp";
 import card4 from "../images/card4.webp";
 ---
 <div class="ct-1 relative flex flex-col items-center justify-center py-24 text-center lg:py-32">
-    <h1 class="mb-2 text-3xl font-bold !leading-[1.1em] lg:mb-4 lg:text-4xl xl:w-[75%] xl:text-6xl">Machen Sie Ihr Zuhause perfekt mit Revinova GmbH!</h1>
+    <h1 class="mb-2 text-3xl font-bold !leading-[1.1em] lg:mb-4 lg:text-4xl xl:w-[75%] xl:text-5xl">Machen Sie Ihr Zuhause perfekt mit <span class="block">Revinova GmbH!</span></h1>
     <div class="mb-16 flex flex-col xl:w-[75%]">
         <p class="lg:text-xl">Bauen. Wohnen. Renovieren.</p>
         <p class="lg:text-xl">Lassen Sie uns Ihre Wohnträume verwirklichen. Kontaktieren Sie uns jetzt für eine unverbindliche Beratung!</p>
@@ -34,6 +34,7 @@ import card4 from "../images/card4.webp";
         height: 100%;
         background-size: cover;
         background-image: url("/src/images/holz.png");
+        mix-blend-mode: multiply;
     }
     @media (min-width: 1280px) {
         .ct-1::before {
