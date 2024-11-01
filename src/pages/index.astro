@@ -6,12 +6,30 @@ import Header from '../components/Header.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Tabs from '../components/Tabs';
 import AccordionUsage from '../components/Accordion';
+import Ct1 from '../components/Ct1.astro';
+import Stats from '../components/Stats.astro';
+import Contact from '../components/Contact';
+import TeamCard from '../components/TeamCard.astro';
+import benni from "../images/benni.webp";
 ---
 
 <Layout title="Revinova GmbH: Ihr Experte für Bauen, Wohnen und Renovieren">
-	<Header/>
 	<main>
 		<CallToAction/>
+		<Ct1 />
+		<Stats />
+		<div class="!mt-16 flex justify-center text-center md:!mt-0">
+			<h2 class="!mb-8 text-5xl font-bold">Unser Team</h2>
+		</div>
+		<div class="flex flex-wrap justify-center justify-items-center gap-4 md:grid-cols-2 lg:grid lg:grid-cols-3">
+			<TeamCard src={benni} name={"Lucas Vincenz"} position={"Geschäftsführer / Büro"}/>
+			<TeamCard src={benni} name={"Benjamin Rechenbach"} position={"Geschäftsführer / Handwerker"}/>
+			<TeamCard src={benni} name={"Frank Rostin"} position={"Handwerker"}/>
+		</div>
+		<div class="form-container relative">
+			<Contact client:load/>
+
+		</div>
 	</main>
 </Layout>
 
@@ -63,5 +81,27 @@ import AccordionUsage from '../components/Accordion';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	@media (max-width: 768px) {
+		.form-container::before {
+			display: none;
+		}
+	}
+	.form-container::before {
+		content: '';
+		position: absolute;
+		top: 50px;
+		z-index: -1;
+		rotate: -15deg;
+		width: 313px;
+		height: 100%;
+		background-size: cover;
+		background-image: url("/src/images/holz.png");
+		mix-blend-mode: multiply;
+	}
+	@media (min-width: 1280px) {
+		.form-container::before {
+			left: -2vw;
+		}
 	}
 </style>

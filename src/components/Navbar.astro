@@ -6,30 +6,30 @@ const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <script src="../flowbite.js"></script>
-<nav id="navbar" class="fixed top-5 w-full px-4 drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] max-h-[56px] md:max-h-[96px] z-30">
-  <div class="flex flex-wrap items-center justify-between pb-4 pt-1 px-8 lg:px-16 bg-white border-gray-200 dark:bg-gray-900 rounded-full max-h-[56px] lg:max-h-[96px]">
+<nav id="navbar" class="fixed top-5 z-30 max-h-[72px] w-full max-w-[1536px] px-4 drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] md:max-h-[96px]">
+  <div class="flex max-h-[72px] flex-wrap items-center justify-between rounded-full border-gray-200 bg-white px-8 pb-4 pt-1 dark:bg-gray-900 md:max-h-[96px] md:px-16">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <Image src={revinovaLogo} class="w-12 lg:w-24 h-auto" alt="Flowbite Logo" />
+        <Image src={revinovaLogo} class="h-auto w-16 md:w-24" alt="Flowbite Logo" />
     </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+      <ul class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
         <li class={currentPath === "" ? "active" : ""}>
-          <a href="/" class="block py-2 px-3 nav-link text-white rounded md:bg-transparent md:text-black md:p-0 md:hover:text-stone-700" aria-current="page">Startseite</a>
+          <a href="/" class="nav-link block rounded px-3 py-2 text-white md:bg-transparent md:p-0 md:text-black md:hover:text-stone-700" aria-current="page">Startseite</a>
         </li>
         <li class={currentPath === "leistungen" ? "active" : ""}>
-          <a href="/leistungen" class="block py-2 px-3 nav-link text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0">Unsere Leistungen</a>
+          <a href="/leistungen" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Unsere Leistungen</a>
         </li>
         <li class={currentPath === "blog" ? "active" : ""}>
-          <a href="/blog" class="block py-2 px-3 nav-link text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0">Blog</a>
+          <a href="/blog" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Blog</a>
         </li>
         <li class={currentPath === "kontakt" ? "active" : ""}>
-          <a href="/kontakt" class="block py-2 px-3 nav-link text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-stone-700 md:p-0">Kontakt</a>
+          <a href="/kontakt" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Kontakt</a>
         </li>
       </ul>
     </div>
