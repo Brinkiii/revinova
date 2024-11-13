@@ -1,0 +1,5 @@
+  # Basic Auth in .htaccess
+  AuthType Basic
+  AuthName "Let's go out and play"
+  AuthUserFile "htpasswd"
+  Require valid-user
