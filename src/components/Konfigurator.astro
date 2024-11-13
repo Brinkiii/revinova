@@ -10,3 +10,44 @@ import bg from "../images/konfigurator-bg.jpg";
         <a target="_blank" href="https://doordesigner.inotherm-tuer.de/configurator/?partnerCode=53346#/home/0,0,0,0,0/0,0,0,0,0/0,0,0,0/0,0,0,0/0,0,0/1,0,0,0" class="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-5 py-3 text-center text-base font-medium text-gray-900 transition-all hover:bg-gray-100 focus:ring-4 focus:ring-gray-100" title="Zu unserem Türenkonfigurator">Konfigurator starten</a>
     </div>
 </div>
+
+<style>
+    .konfigurator {
+  position: relative;
+  background-image: url(../images/konfigurator-bg-3.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+/* .konfigurator:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100vw;
+  z-index: -2;
+  
+} */
+
+.konfigurator .content {
+  z-index: 2;
+  text-align: center;
+}
+
+.konfigurator:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-size: cover;
+}
+</style>
