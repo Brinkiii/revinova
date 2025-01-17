@@ -4,6 +4,7 @@ import card1 from "../images/card-1.webp";
 import card2 from "../images/card2.webp";
 import card3 from "../images/card3.webp";
 import card4 from "../images/card4.webp";
+import card5 from "../images/card5.webp";
 ---
 <div class="ct-1 relative flex flex-col items-center justify-center py-24 text-center lg:py-32">
     <h1 class="mb-2 text-3xl font-bold !leading-[1.1em] lg:mb-4 lg:text-4xl xl:w-[75%] xl:text-5xl">Machen Sie Ihr Zuhause perfekt mit <span class="block">Revinova GmbH!</span></h1>
@@ -11,12 +12,15 @@ import card4 from "../images/card4.webp";
         <p class="lg:text-xl">Bauen. Wohnen. Renovieren.</p>
         <p class="lg:text-xl">Lassen Sie uns Ihre Wohnträume verwirklichen. Kontaktieren Sie uns jetzt für eine unverbindliche Beratung!</p>
     </div>
-    <div class="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card src={card1} title={"Lorem Ipsum"} description={"Lorem Ipsum dolor sit amet lorem dolor aret itum salet itin odunis rashupti."} link={"/leistungen"}/>
-        <Card src={card2} title={"Lorem Ipsum"} description={"Lorem Ipsum dolor sit amet lorem dolor aret itum salet itin odunis rashupti."} link={"/leistungen"}/>
-        <Card src={card3} title={"Lorem Ipsum"} description={"Lorem Ipsum dolor sit amet lorem dolor aret itum salet itin odunis rashupti."} link={"/leistungen"}/>
-        <Card src={card4} title={"Lorem Ipsum"} description={"Lorem Ipsum dolor sit amet lorem dolor aret itum salet itin odunis rashupti."} link={"/leistungen"}/>
+    <div class="grid grid-cols-1 justify-center gap-4 md:grid-cols-3 lg:grid-cols-3 justify-items-center content-center mb-4">
+        <Card src={card1} title={"Neubauprojekte"} description={"Wir planen und realisieren moderne Neubauten nach höchsten Qualitätsstandards."} link={"/leistungen"}/>
+        <Card src={card2} title={"Modernisierung"} description={"Wir bringen bestehende Gebäude mit innovativen Lösungen auf den neuesten Stand."} link={"/leistungen"}/>
+        <Card src={card3} title={"Altbau-Sanierung"} description={"Historische Bausubstanz erhalten und zugleich modernen Wohnkomfort schaffen."} link={"/leistungen"}/>   
     </div>
+    <div class="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:grid-cols-2 justify-items-center content-center">
+        <Card src={card4} title={"Gebäudemanagement"} description={"Effiziente Verwaltung und nachhaltige Betreuung Ihrer Immobilien aus einer Hand."} link={"/leistungen"}/>
+        <Card src={card5} title={"Immobilienverwaltung"} description={"Ihre Immobilien in besten Händen – zuverlässig und wirtschaftlich verwaltet."} link={"/leistungen"}/>
+    </div>    
 </div>
 <style>
     @media (max-width: 768px) {

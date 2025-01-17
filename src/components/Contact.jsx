@@ -1,26 +1,29 @@
-import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+import { useState } from "react";
 
 export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+  const [agreed, setAgreed] = useState(false);
 
   return (
     <div className="main-form relative isolate px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
-        <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontaktieren Sie uns</h3>
+        <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Kontaktieren Sie uns
+        </h3>
         <p className="mt-2 text-lg leading-8 text-gray-600">
           Haben wir Sie überzeugt? Teilen Sie uns gerne Ihr Projekt mit!
         </p>
       </div>
-      <form action="#" method="post" className="mx-auto mt-4 max-w-xl sm:mt-8">
+      <form
+        action="https://formsubmit.co/YOUR_EMAIL"
+        method="POST"
+        className="mx-auto mt-4 max-w-xl sm:mt-8"
+      >
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
-            <label htmlFor="vorname" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="vorname"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Vorname
             </label>
             <div className="mt-2.5">
@@ -35,7 +38,10 @@ export default function Example() {
             </div>
           </div>
           <div>
-            <label htmlFor="nachname" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="nachname"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Nachname
             </label>
             <div className="mt-2.5">
@@ -50,7 +56,10 @@ export default function Example() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="company"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Firma
             </label>
             <div className="mt-2.5">
@@ -64,7 +73,10 @@ export default function Example() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="email"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               E-Mail
             </label>
             <div className="mt-2.5">
@@ -79,11 +91,13 @@ export default function Example() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="phone-number" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Telefonnummer
             </label>
             <div className="relative mt-2.5">
-              
               <input
                 type="tel"
                 name="phone-number"
@@ -94,7 +108,10 @@ export default function Example() {
             </div>
           </div>
           <div className="sm:col-span-2">
-            <label htmlFor="nachricht" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label
+              htmlFor="nachricht"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
               Ihre Nachricht
             </label>
             <div className="mt-2.5">
@@ -104,28 +121,41 @@ export default function Example() {
                 required
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
-                defaultValue={''}
+                defaultValue={""}
               />
             </div>
           </div>
-          
-            <div class="flex items-center">
-                <input id="link-checkbox" type="checkbox" value="" class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-stone-400 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600" />
-                <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 sm:whitespace-nowrap">Ich habe die <a href="/datenschutz" class="text-blue-600 hover:underline dark:text-stone-400">Datenschutzerklärung</a> gelesen und akzeptiert.</label>
-            </div>
-
+          <div className="sm:col-span-2 flex items-center">
+            <input
+              id="link-checkbox"
+              type="checkbox"
+              name="agreed"
+              value="true"
+              required
+              className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-stone-400"
+            />
+            <label
+              htmlFor="link-checkbox"
+              className="ms-2 text-sm font-medium text-gray-900"
+            >
+              Ich habe die{" "}
+              <a href="/datenschutz" className="text-blue-600 hover:underline">
+                Datenschutzerklärung
+              </a>{" "}
+              gelesen und akzeptiert.
+            </label>
+          </div>
         </div>
         <div className="mt-10">
           <button
             type="submit"
             value="submit"
-            className="block w-full rounded-md bg-stone-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            className="block w-full rounded-md bg-stone-950 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm transition-all hover:bg-stone-700"
           >
             Nachricht abschicken
           </button>
         </div>
       </form>
-      
     </div>
-  )
+  );
 }

@@ -1,0 +1,123 @@
+---
+interface Props {
+	title: string;
+}
+import '../styles.css';
+const { title } = Astro.props;
+import Header from '../components/Header.astro';
+import Header2 from '../components/Header2.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<slot />
+		<Footer/>
+	<script is:inline src="/public/app.js"></script>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: 'Poppins', system-ui, sans-serif;
+		background: white;
+		overflow-x: clip;
+		background-color: #ffffff;
+	}
+	body {
+		max-width: 1536px;
+		margin-inline: auto;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	main {
+		margin: auto;
+		width: 1536px;
+		max-width: calc(100% - 2rem);
+		color: rgb(17 24 39);
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	/* Register your custom font family and tell the browser where to find it. */
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins-Bold.ttf') format('truetype');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins-Italic.ttf') format('truetype');
+		font-weight: normal;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins-BoldItalic.ttf') format('truetype');
+		font-weight: bold;
+		font-style: italic;
+		font-display: swap;
+	}
+	/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #0c0a09 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #0c0a09;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
+</style>
