@@ -1,8 +1,8 @@
 ---
 import {Image} from "astro:assets";
 import revinovaLogo from "../images/Logo_Revinova.svg";
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
+// const pathname = new URL(Astro.request.url).pathname;
+// const currentPath = pathname.slice(1); // remove the first "/"
 ---
 
 <script src="../flowbite.js"></script>
@@ -19,19 +19,19 @@ const currentPath = pathname.slice(1); // remove the first "/"
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
-        <li class={currentPath === "" ? "active" : ""}>
+        <li>
           <a href="#" class="nav-link block rounded px-3 py-2 text-white md:bg-transparent md:p-0 md:text-black md:hover:text-stone-700" aria-current="page">Startseite</a>
         </li>
-        <li class={currentPath === "leistungen" ? "active" : ""}>
+        <li>
           <a href="#wir-ueber-uns" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Wir über uns</a>
         </li>
-        <li class={currentPath === "leistungen" ? "active" : ""}>
+        <li>
           <a href="#unsere-leistungen" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Unsere Leistungen</a>
         </li>
-        <li class={currentPath === "blog" ? "active" : ""}>
+        <li>
           <a href="#unser-team" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Unser Team</a>
         </li>
-        <li class={currentPath === "kontakt" ? "active" : ""}>
+        <li>
           <a href="#kontakt" class="nav-link block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:border-0 md:p-0 md:hover:bg-transparent md:hover:text-stone-700">Kontakt</a>
         </li>
       </ul>
