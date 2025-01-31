@@ -5,6 +5,7 @@ export default function Example() {
 
   return (
     <div className="main-form relative isolate px-6 py-24 sm:py-32 lg:px-8">
+      <div class="anchor block relative invisible -top-36" id="kontakt"></div>
       <div className="mx-auto max-w-2xl text-center">
         <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Kontaktieren Sie uns

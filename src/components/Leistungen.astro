@@ -1,0 +1,48 @@
+---
+import Card from "./Card.astro"
+import card1 from "../images/card-1.webp";
+import card2 from "../images/card2.webp";
+import card3 from "../images/card3.webp";
+import card4 from "../images/card4.webp";
+import card5 from "../images/card5.webp";
+---
+<div class="ct-1 relative flex flex-col items-center justify-center py-24 text-center lg:py-32">
+    <!-- <h1 class="mb-2 text-3xl font-bold !leading-[1.1em] lg:mb-4 lg:text-4xl xl:w-[75%] xl:text-5xl">Machen Sie Ihr Zuhause perfekt mit <span class="block">Revinova GmbH!</span></h1>
+    <div class="mb-16 flex flex-col xl:w-[75%]">
+        <p class="lg:text-xl">Bauen. Wohnen. Renovieren.</p>
+        <p class="lg:text-xl">Lassen Sie uns Ihre Wohnträume verwirklichen. Kontaktieren Sie uns jetzt für eine unverbindliche Beratung!</p>
+    </div> -->
+    <div class="grid grid-cols-1 justify-center gap-4 md:grid-cols-2 lg:grid-cols-2 justify-items-center content-center">
+        <Card src={card4} title={"Gebäudemanagement"} description={"Effiziente Verwaltung und nachhaltige Betreuung Ihrer Immobilien aus einer Hand."} link={"/leistungen"}/>
+        <Card src={card5} title={"Immobilienverwaltung"} description={"Ihre Immobilien in besten Händen – zuverlässig und wirtschaftlich verwaltet."} link={"/leistungen"}/>
+    </div>    
+</div>
+<style>
+    @media (max-width: 768px) {
+        .ct-1::before {
+            display: none;
+        }
+    }
+    .ct-1::before {
+        content: '';
+        position: absolute;
+        top: 50px;
+        z-index: -1;
+        rotate: 5deg;
+        width: 313px;
+        height: 100%;
+        background-size: cover;
+        background-image: url("/src/images/holz.png");
+        mix-blend-mode: multiply;
+    }
+    @media (min-width: 1280px) {
+        .ct-1::before {
+            right: 2vw;
+        }
+    }
+    @media (min-width: 1800px) {
+        .ct-1::before {
+            right: -7vw;
+        }
+    }
+</style>
