@@ -6,6 +6,34 @@ import revinovaLogo from "../images/Logo_Revinova.svg";
 ---
 
 <script src="../flowbite.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("[data-collapse-toggle='navbar-default']");
+    const menu = document.getElementById("navbar-default");
+
+    if (!menu || !menuButton) return; // Falls eines der Elemente nicht existiert, abbrechen
+
+    // Toggle für das Burger-Menü (öffnet und schließt das Menü)
+    menuButton.addEventListener("click", function (event) {
+      event.stopPropagation(); // Verhindert, dass der Klick-Event direkt danach das Menü wieder schließt
+      menu.classList.toggle("hidden");
+    });
+
+    // Schließen des Menüs, wenn außerhalb geklickt wird
+    document.addEventListener("click", function (event) {
+      if (!(event.target instanceof Node)) return;
+
+      const isClickInsideMenu = menu.contains(event.target);
+      const isClickOnButton = menuButton.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnButton) {
+        menu.classList.add("hidden");
+      }
+    });
+  });
+</script>
+
+
 <nav id="navbar" class="fixed top-5 z-30 max-h-[72px] w-full max-w-[1536px] px-4 drop-shadow-[5px_10px_25px_rgba(0,0,0,0.15)] md:max-h-[96px]">
   <div class="flex max-h-[72px] flex-wrap items-center justify-between rounded-full border-gray-200 bg-white px-8 pb-4 pt-1 dark:bg-gray-900 md:max-h-[96px] md:px-16">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
