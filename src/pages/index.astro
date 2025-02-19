@@ -13,6 +13,11 @@ import Contact from '../components/Contact';
 import TeamCard from '../components/TeamCard.astro';
 import Konfigurator from '../components/Konfigurator.astro';
 import benni from "../images/benni.webp";
+import lucas from "../images/lucas.webp";
+import angelika from "../images/angelika.webp";
+import frank from "../images/frank.webp";
+import raven from "../images/raven.webp";
+import marc from "../images/marc.webp";
 ---
 
 <Layout title="Revinova GmbH: Ihr Experte für Bauen, Wohnen und Renovieren">
@@ -26,10 +31,23 @@ import benni from "../images/benni.webp";
   		<div class="anchor block relative invisible -top-36" id="unser-team" ></div>		
 			<h2 class="!mb-8 text-5xl font-bold">Unser Team</h2>
 		</div>
-		<div class="flex flex-wrap justify-center justify-items-center gap-4 md:grid-cols-2 lg:grid lg:grid-cols-3">
-			<TeamCard src={benni} name={"Benjamin Rechenbach"} position={"Schreiner / Geschäftsführer"}/>
-			<TeamCard src={benni} name={"Lucas Vincenz"} position={"Elektriker / Geschäftsführer"}/>
-			<TeamCard src={benni} name={"Frank Rostin"} position={"Schreiner"}/>
+		<!-- <div class="flex flex-wrap gap-4 justify-center justify-items-center md:grid md:grid-cols-2 xl:max-w-[1150px] xl:mx-auto xl:grid xl:grid-cols-3 mb-4">
+			<TeamCard src={benni} name={"Benjamin Rechenbach"} position={"Geschäftsführer"}/>
+			<TeamCard src={benni} name={"Lucas Vincenz"} position={"Geschäftsführer"}/>
+			<TeamCard src={benni} name={"Angelika Tittgen"} position={"Büro"}/>
+		</div>
+		<div class="flex flex-wrap gap-4 justify-center justify-items-center md:grid md:grid-cols-2 xl:max-w-[1150px] xl:mx-auto xl:grid xl:grid-cols-3">
+			<TeamCard src={benni} name={"Frank Rostin"} position={"Monteur"}/>
+			<TeamCard src={benni} name={"Raven Liebermann"} position={"Monteur"}/>
+			<TeamCard src={benni} name={"Marc Klose"} position={"Monteur"}/>
+		</div> -->
+		<div class="flex flex-wrap gap-4 justify-center justify-items-center md:grid md:grid-cols-2 lg:max-w-[800px] lg:mx-auto xl:max-w-[1150px] xl:grid xl:grid-cols-3 mb-4">
+			<TeamCard src={benni} name={"Benjamin Rechenbach"} position={"Geschäftsführer"}/>
+			<TeamCard src={lucas} name={"Lucas Vincenz"} position={"Geschäftsführer"}/>
+			<TeamCard src={angelika} name={"Angelika Tittgen"} position={"Büro"}/>
+			<TeamCard src={frank} name={"Frank Rostin"} position={"Monteur"}/>
+			<TeamCard src={raven} name={"Raven Liebermann"} position={"Monteur"}/>
+			<TeamCard src={marc} name={"Marc Klose"} position={"Monteur"}/>
 		</div>
 		<div class="form-container relative">
 			<Contact client:load/>
