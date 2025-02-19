@@ -1,11 +1,11 @@
 ---
-const {name, position, src, link} = Astro.props
+const {name, position, src, alt} = Astro.props
 import {Image} from "astro:assets";
 ---
 
 <div class="rounded-lg w-[360px] border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
     <div class="flex flex-col items-center py-10">
-        <Image src={src} class="mb-3 size-52 rounded-full object-contain shadow-lg" alt="Teambild" />
+        <Image src={src} class="mb-3 size-52 rounded-full object-contain shadow-lg" alt={alt} />
 
         <p class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{name}</p>
         <span class="text-sm text-gray-500 dark:text-gray-400">{position}</span>
