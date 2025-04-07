@@ -30,7 +30,7 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="vorname"
+                name="Vorname"
                 id="vorname"
                 required
                 autoComplete="given-name"
@@ -48,7 +48,7 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="nachname"
+                name="Nachname"
                 id="nachname"
                 autoComplete="family-name"
                 required
@@ -66,7 +66,7 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
+                name="Firma"
                 id="company"
                 autoComplete="organization"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
@@ -83,7 +83,7 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="email"
-                name="email"
+                name="E-Mail"
                 id="email"
                 required
                 autoComplete="email"
@@ -101,7 +101,7 @@ export default function Example() {
             <div className="relative mt-2.5">
               <input
                 type="tel"
-                name="phone-number"
+                name="Telefonnummer"
                 id="phone-number"
                 autoComplete="tel"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-stone-400 sm:text-sm sm:leading-6"
@@ -117,7 +117,7 @@ export default function Example() {
             </label>
             <div className="mt-2.5">
               <textarea
-                name="nachricht"
+                name="Nachricht"
                 id="nachricht"
                 required
                 rows={4}
@@ -130,7 +130,7 @@ export default function Example() {
             <input
               id="link-checkbox"
               type="checkbox"
-              name="agreed"
+              name="akzeptiert"
               value="true"
               required
               className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-stone-400"
@@ -180,6 +180,18 @@ export default function Example() {
             </svg>
             info@revinova.de
           </a>
+          <input
+            type="hidden"
+            name="_subject"
+            value="Revinova Webseite - Neue Nachricht!"
+          />
+          <input
+            type="hidden"
+            name="_blacklist"
+            value="Gewonnen, Kostenlos, Jetzt handeln, Dringend, Kredit ohne Schufa, Nur heute, Sofortüberweisung, 100 % sicher, Viagra, Arbeiten von zu Hause"
+          />
+          <input type="text" name="_honey" className="hidden" />
+          <input type="hidden" name="_template" value="box" />
         </div>
 
         <div className="mt-10">
