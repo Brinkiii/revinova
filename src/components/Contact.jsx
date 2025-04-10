@@ -22,7 +22,11 @@ export default function Example() {
         method="POST"
         className="mx-auto mt-4 max-w-xl sm:mt-8"
       >
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="25fbd012-a907-4e14-aa67-b21d1ccc9eeb"
+        />
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label
