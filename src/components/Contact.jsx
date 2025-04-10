@@ -27,6 +27,17 @@ export default function Example() {
           name="access_key"
           value="25fbd012-a907-4e14-aa67-b21d1ccc9eeb"
         />
+        <input
+          type="hidden"
+          name="subject"
+          value="Revinova GmbH | Neue Nachricht vom Kontaktformular"
+        />
+        <input type="hidden" name="from_name" value="Revinova" />
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://www.revinova.de/formularbestaetigung"
+        />
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label
@@ -138,7 +149,7 @@ export default function Example() {
             <input
               id="link-checkbox"
               type="checkbox"
-              name="akzeptiert"
+              name="Datenschutz akzeptiert"
               value="true"
               required
               className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-gray-900 focus:ring-2 focus:ring-stone-400"

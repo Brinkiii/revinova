@@ -1,0 +1,72 @@
+---
+// import Layout from "../layouts/Layout.astro";
+// import Card from "../components/Card.astro";
+import Navbar from "../components/Navbar.astro";
+// import Header from "../components/Header.astro";
+import SubLayout from "../layouts/SubLayout.astro";
+// import WIP from "../components/WIP.astro";
+---
+
+<SubLayout title="Unsere Datenschutzerklärung - Revinova">
+  <Navbar />
+  <main class="mt-[145px]">
+    <div class="flex flex-col items-center justify-center text-center"> 
+      <h1 class="text-2xl font-bold text-gray-900 mb-6">Formular erfolgreich abgesendet!</h1>
+      <a href="/" class="hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 inline-flex items-center justify-center rounded-lg bg-stone-950 px-5 py-3 text-center text-base font-medium text-white transition-all hover:bg-stone-700 focus:ring-4" title="Zurück zur Startseite">Zurück zur Startseite</a>
+    </div>
+    
+  </main>
+</SubLayout>
+
+<style>
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
