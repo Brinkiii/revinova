@@ -5,7 +5,10 @@ export default function Example() {
 
   return (
     <div className="main-form relative isolate px-6 py-24 sm:py-32 lg:px-8">
-      <div class="anchor block relative invisible -top-36" id="kontakt"></div>
+      <div
+        className="anchor block relative invisible -top-36"
+        id="kontakt"
+      ></div>
       <div className="mx-auto max-w-2xl text-center">
         <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Kontaktieren Sie uns
@@ -15,10 +18,11 @@ export default function Example() {
         </p>
       </div>
       <form
-        action="https://formsubmit.co/YOUR_EMAIL"
+        action="https://api.web3forms.com/submit"
         method="POST"
         className="mx-auto mt-4 max-w-xl sm:mt-8"
       >
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           <div>
             <label
@@ -147,14 +151,14 @@ export default function Example() {
             </label>
           </div>
         </div>
-        <div class="mt-4 inline-flex mx-auto w-full gap-2 items-center md:mt-6 flex-col md:flex-row justify-center">
+        <div className="mt-4 inline-flex mx-auto w-full gap-2 items-center md:mt-6 flex-col md:flex-row justify-center">
           <a
             href="tel:020877890030"
-            class="inline-flex items-center gap-1 rounded-lg bg-stone-950 px-5 py-3 text-center text-sm font-medium text-white transition-all hover:bg-stone-700 focus:outline-none focus:ring-4 focus:ring-stone-400"
+            className="inline-flex items-center gap-1 rounded-lg bg-stone-950 px-5 py-3 text-center text-sm font-medium text-white transition-all hover:bg-stone-700 focus:outline-none focus:ring-4 focus:ring-stone-400"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="size-3 text-white"
+              className="size-3 text-white"
               viewBox="0 0 512 512"
             >
               <path
@@ -166,12 +170,12 @@ export default function Example() {
           </a>
           <a
             href="mailto:Info@revinova.de"
-            class="inline-flex items-center gap-2 rounded-lg bg-stone-950 px-5 py-3 text-center text-sm font-medium text-white transition-all hover:bg-stone-700 focus:outline-none focus:ring-4 focus:ring-stone-400"
+            className="inline-flex items-center gap-2 rounded-lg bg-stone-950 px-5 py-3 text-center text-sm font-medium text-white transition-all hover:bg-stone-700 focus:outline-none focus:ring-4 focus:ring-stone-400"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
-              class="size-3 text-white"
+              className="size-3 text-white"
             >
               <path
                 d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
@@ -181,17 +185,11 @@ export default function Example() {
             info@revinova.de
           </a>
           <input
-            type="hidden"
-            name="_subject"
-            value="Revinova Webseite - Neue Nachricht!"
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{ display: "none" }}
           />
-          <input
-            type="hidden"
-            name="_blacklist"
-            value="Gewonnen, Kostenlos, Jetzt handeln, Dringend, Kredit ohne Schufa, Nur heute, Sofortüberweisung, 100 % sicher, Viagra, Arbeiten von zu Hause"
-          />
-          <input type="text" name="_honey" className="hidden" />
-          <input type="hidden" name="_template" value="box" />
         </div>
 
         <div className="mt-10">

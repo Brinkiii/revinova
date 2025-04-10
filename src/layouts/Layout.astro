@@ -4,7 +4,7 @@ interface Props {
 }
 import '../styles.css';
 const { title } = Astro.props;
-import Header from '../components/Header.astro';
+// import Header from '../components/Header.astro';
 import Header2 from '../components/Header2.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -24,7 +24,7 @@ import Footer from '../components/Footer.astro';
 		<Header2/>
 		<slot />
 		<Footer/>
-	<script is:inline src="/public/app.js"></script>
+	<script is:inline src="../src/app.js"></script>
 	</body>
 </html>
 <style is:global>
@@ -44,7 +44,6 @@ import Footer from '../components/Footer.astro';
 		background: white;
 		overflow-x: clip;
 		background-color: #ffffff;
-		scroll-behavior: smooth;
 	}
 	body {
 		max-width: 1536px;
