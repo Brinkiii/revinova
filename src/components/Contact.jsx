@@ -29,7 +29,7 @@ export default function Example() {
               htmlFor="vorname"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              Vorname
+              Vorname <small>(Pflichtfeld)</small>
             </label>
             <div className="mt-2.5">
               <input
@@ -47,7 +47,7 @@ export default function Example() {
               htmlFor="nachname"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              Nachname
+              Nachname <small>(Pflichtfeld)</small>
             </label>
             <div className="mt-2.5">
               <input
@@ -82,7 +82,7 @@ export default function Example() {
               htmlFor="email"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              E-Mail
+              E-Mail <small>(Pflichtfeld)</small>
             </label>
             <div className="mt-2.5">
               <input
@@ -117,7 +117,7 @@ export default function Example() {
               htmlFor="nachricht"
               className="block text-sm font-semibold leading-6 text-gray-900"
             >
-              Ihre Nachricht
+              Ihre Nachricht <small>(Pflichtfeld)</small>
             </label>
             <div className="mt-2.5">
               <textarea
@@ -147,7 +147,7 @@ export default function Example() {
               <a href="/datenschutz" className="text-blue-600 hover:underline">
                 Datenschutzerklärung
               </a>{" "}
-              gelesen und akzeptiert.
+              gelesen und akzeptiert. <small>(Pflichtfeld)</small>
             </label>
           </div>
         </div>
